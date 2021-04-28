@@ -1,0 +1,51 @@
+{
+  "name": "electron-dida",
+  "productName": "electron-dida",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "KEKE046",
+    "email": "KEKE_046@pku.edu.cn"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "options": {
+              "categories": ["Office"],
+              "description": "滴答清单",
+              "genericName": "滴答清单",
+              "productName": "滴答清单",
+              "maintainer": "KEKE",
+              "icon": "src/dida.png",
+              "homepage": "https://dida365.com/"
+            }}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "12.0.5"
+  }
+}
